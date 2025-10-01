@@ -1,0 +1,93 @@
+---
+import Badge from "../components/Badge.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/icons/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import PersonIcon from "../components/icons/Person.astro";
+import SobreMi from "../components/SobreMi.astro";
+import HandIcon from "../components/icons/Hand.astro";
+
+---
+
+<Layout title="Porfolio de Emmanuel Duffaut" description="Desarrollador Web">
+  <main class="px-4">
+    <SectionContainer class="py-38 pb-10" id="home">
+      <img
+        class="rounded-full size-12 object-cover"
+        src="./fotoPerfil.jpeg"
+        alt="mi foto"
+      />
+
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex justify-center flex-row gap-x-4 pb-10 lg:pb-10 mt-10"
+      >
+        Hola, soy Emmanuel <a
+          href="https://www.linkedin.com/in/emmanuel-duffaut/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+          ><Badge>Disponible para trabajar</Badge></a
+        >
+      </h1>
+      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+        <span>+15 años de experiencia trabajando en Infraestructura.</span>
+        <span class="text-yellow-200/90">Desarrolador Web.</span>
+        <span class="text-red-200/90">De Montevideo, Uruguay.</span>
+        <span class="opacity-75"
+          >Especializado en Infraestructura y Programación</span
+        >
+      </h2>
+      <nav class="flex flex-wrap gap-x-8 mt-4">
+        <SocialPill href="https://www.linkedin.com/in/emmanuel-duffaut/">
+          <LinkedIn class="size-4 lg:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/eduffaut">
+          <GitHubIcon class="size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:eduffaut20@gmail.com">
+          <MailIcon class="size-6" />
+          eduffaut20@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+        <Briefcase class="size-6 inline" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="proyectos">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+        <CodeIcon class="size-6 inline" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center mt-4">
+        <PersonIcon class="size-6 inline" />
+        Sobre mí
+      </h2>
+      <SobreMi />
+    </SectionContainer>
+    <a href="#" id="back-to-top" class="fixed bottom-10 right-10  hover:bg-white p-2 rounded-full text-center opacity-50 w-8 h-8" title="Ir al principio de la página">
+      <HandIcon class="w-6 h-6" />
+    </a>
+  </main>
+</Layout>
+
+
+
