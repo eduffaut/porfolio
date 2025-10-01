@@ -88,9 +88,8 @@ const THEMES = ["Light", "Dark", "System"]
     remove = () => {
       matchMedia.removeEventListener("change", updateTheme)
     }
+
     const themePreference = getThemePreference()
-
-
     const isDark =
       themePreference === "dark" ||
       (themePreference === "system" && matchMedia.matches)
