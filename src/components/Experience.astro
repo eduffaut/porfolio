@@ -11,7 +11,7 @@ const EXPERIENCE = [
   },
   {
     date: '2016 - 2017',
-    title: 'Adminsitrador de Redes y Seguridad en IBM',
+    title: 'Administrador de Redes y Seguridad en IBM',
     description:
       'Responsable de la administración y seguridad de la red en cliente de la empresa IBM',
     link: '#',
@@ -22,9 +22,7 @@ const EXPERIENCE = [
 <ol class="relative border-s border-gray-200 ml-4">                  
     {
         EXPERIENCE.map(experience => (
-            <li class="mb-10 ms-4">
-               <ExperienceItem {...experience} />
-            </li>
+            <ExperienceItem {...experience} />
         ))
     }
 
